@@ -1,14 +1,6 @@
 #!/bin/bash
-sudo yum update -y
-sudo yum install docker -y
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo chmod 666 /var/run/docker.sock
-sudo curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-docker-compose version
-pwd
-sudo yum install git -y
-git clone https://github.com/mujahidshaik28/wordpress.git
-cd wordpress
-docker-compose up -d
+sudo yum -y install git 
+git clone https://github.com/nissi1234/Agri.git
+cd Agri/
+pip3 install -r requirements.txt
+screen -m -d python3 app.py
