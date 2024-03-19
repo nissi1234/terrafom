@@ -1,5 +1,5 @@
 # Creating EC2 Instance
-resource "aws_instance" "wordpress" {
+resource "aws_instance" "Agri" {
   ami                         = "ami-02d7fd1c2af6eead0"
   instance_type               = "t2.micro"
   key_name                    = "master1"
@@ -9,6 +9,6 @@ resource "aws_instance" "wordpress" {
   user_data                   = file("userdata.sh")
 
   tags = {
-    Name = "terraform"
+    Name = "agri"
   }
 }
